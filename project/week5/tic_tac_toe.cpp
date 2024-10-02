@@ -98,15 +98,13 @@ int main(){
         bool isWin = true;
         break;
         }
-        
-        if (isWin == true){// 승리 후 종료
-        break;
-    }
-
         }
     }
 
-   
+    if (isWin == true){// 승리 후 종료
+        break;
+    }
+
 
     //7. 다 찼을 경우 종료 판별
     int endcount = 0;
