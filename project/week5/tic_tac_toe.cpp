@@ -1,9 +1,6 @@
 #include<iostream>
 using namespace std;
 
-#define WIDTH 9
-#define HEIGHT 3
-
 int main(){
     const int numCell = 3;
     char board[numCell][numCell]{};
@@ -74,37 +71,36 @@ int main(){
 
     //6. 승리조건 판별
     bool isWin = false;
-    
-    char symbol[3] = {'X', 'O'};//모든 사용자에 대해 승리 조건 충족 확인
+    char symbol[3] = {'X', 'O'};//모든 사용자에 대해 승리 조건 충족 확인 및 승리시 루프 탈출
+
     for (char n : symbol){
         for(int i = 0; i < numCell; i++){
         if(board[i][0]== n && board[i][1]== n && board[i][2]== n){ // 가로 승리
-        cout<< "user"<< n <<"이 승리했습니다!";
-        bool isWin = true;
+        cout<< "user "<< n <<" 이 승리했습니다!";
+        isWin = true;
         break;
         }
         else if(board[0][i]== n && board[1][i]== n && board[2][i]== n){// 세로 승리
-        cout<< "user"<< n <<"이 승리했습니다!";
-        bool isWin = true;
+        cout<< "user "<< n <<" 이 승리했습니다!";
+        isWin = true;
         break;
         }
-        else if(board[0][0]== n && board[1][1]== n && board[2][2]== n){ // \대각선 승리 
-        cout<< "user"<< n <<"이 승리했습니다!";
-        bool isWin = true;
+        }
+        if(board[0][0]== n && board[1][1]== n && board[2][2]== n){ // \대각선 승리 
+        cout<< "user "<< n <<" 이 승리했습니다!";
+        isWin = true;
         break;
         }
         else if(board[0][2]== n && board[1][1]== n && board[2][0]== n){// /대각선 승리
-        cout<< "user"<< n <<"이 승리했습니다!";
-        bool isWin = true;
+        cout<< "user "<< n <<" 이 승리했습니다!";
+        isWin = true;
         break;
         }
-        }
     }
-
-    if (isWin == true){// 승리 후 종료
+    if (isWin){// 승리 후 종료
         break;
     }
-
+    
 
     //7. 다 찼을 경우 종료 판별
     int endcount = 0;
