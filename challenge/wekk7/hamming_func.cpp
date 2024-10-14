@@ -24,7 +24,7 @@ int calcHammingDist(string s1, string s2){
                 count += 1;
             }
         }
-    return count;
+    return count;//해밍 거리 반환
 }
 
 int main(){
@@ -37,11 +37,11 @@ int main(){
     cout << "DNA2: ";
     cin >> s2;
 
-    if(s1.length() != s2.length()){//길이가 다른 오류
+    if(s1.length() != s2.length()){//길이가 다른 오류 발생시 while문의 처음으로 돌아감.
         cout << "오류: 길이가 다름" << endl;
     }
     else {
-        int count = calcHammingDist(s1, s2);
+        int count = calcHammingDist(s1, s2); //같은 길이의 문자열을 입력했을 경우 해밍 거리 출력 후 루프 탈출출
         cout << "해밍 거리는" << count << endl;
         break;
     }
