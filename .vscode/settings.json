@@ -51,6 +51,7 @@
         "xtr1common": "cpp",
         "xutility": "cpp",
         "vector": "cpp",
-        "student_vector": "cpp"
+        "student_vector": "cpp",
+        "shape_abstract": "cpp"
     }
 }
