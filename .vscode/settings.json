@@ -52,6 +52,9 @@
         "xutility": "cpp",
         "vector": "cpp",
         "student_vector": "cpp",
-        "shape_abstract": "cpp"
+        "shape_abstract": "cpp",
+        "fstream": "cpp",
+        "sstream": "cpp",
+        "queue": "cpp"
     }
 }
